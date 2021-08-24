@@ -13,7 +13,7 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -276,7 +276,7 @@
               <div class="pic"><img src="assets/img/team/utkal.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Utkal Kanaujia</h4>
-                <span>Founder & COO</span>
+                <span>Chief Executive Officer</span>
                 <div class="social">
                   
                   <a href="https://www.instagram.com/utkal_kanaujia/"><i class="ri-instagram-fill"></i></a>
@@ -292,7 +292,7 @@
               <div class="pic"><img src="assets/img/team/ayush.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Ayush Yati </h4>
-                <span>Co-founder & CEO</span>
+                <span>Chief Executive Officer</span>
                 <div class="social">
                   <a href="https://www.linkedin.com/in/ayush-kumar-yati-50a402200/"> <i class="ri-linkedin-box-fill"></i> </a>
                   <a href="https://www.instagram.com/ayushyati_/"><i class="ri-instagram-fill"></i></a>
@@ -328,19 +328,19 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>Lucknow,India</p>
+                <p>Lucknow, India</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@ezmotion.in</p>
+                <p><a href="mailto: info@ezmotion.in">info@ezmotion.in</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <h4>Instagram:</h4>
+                <p><a href="https://www.instagram.com/__ezmotion__/">@__ezmotion__</a></p>
               </div>
               
 
@@ -350,7 +350,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form  method="post" name="ezmotion" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -361,18 +361,13 @@
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
+              
               <div class="form-group">
                 <label for="name">Message</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
@@ -381,46 +376,28 @@
         </div>
 
       </div>
+      
+      <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxtq7dOs9jescDHUAhKU05k-XpNUebLQWeEwSRQvTvZTVd85keHD2jGsyFz6SzJgjtd/exec'
+            const form = document.forms['ezmotion']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-    
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Ezmotion</h3>
-            <p>
-              Lucknow,India <br>
-              
-              <strong>Phone:</strong> <br>
-              <strong>Email:</strong> info@ezmotion.in<br>
-            </p>
-          </div>
-
-          
-
-          
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Let's connect</h4>
-            
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
